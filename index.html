@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topics</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Custom styles for a better layout and larger buttons */
+    body {
+      background-color: #f7f7f7;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* padding: 15px 30px; */
+        padding: 0 0 10px 10px;
+        background-color: #fff;
+        /* display: flex;
+            align-items: center;
+            justify-content: space-between; */
+        text-align: left;
+        border-bottom: 2px solid #eaeaea;
+      }
+
+      .logo {
+        width: 5%;
+        max-width: 150px;
+        margin-top: 0.9%;
+
+      }
+
+      .header-image {
+        width: 30%;
+        height: auto;
+        max-width: 500px;
+      }
+
+    .container {
+      margin-top: 30px;
+      width: 90%;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #004080; /* Dark Blue */
+    }
+
+    #buttonContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-large {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn-large:hover {
+      background-color: #003366; /* Darker Blue */
+      color: white;
+    }
+
+    .btn.disabled-btn {
+      background-color: #d3d3d3; /* Light Gray */
+      border-color: #d3d3d3;
+      color: #a9a9a9; /* Dark Gray */
+      cursor: not-allowed;
+    }
+
+    .btn-view-results {
+      font-size: 18px;
+      padding: 15px 30px;
+      margin-top: 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+      background-color: #5bc0de; /* Bootstrap's info color */
+      color: white;
+      border: none;
+    }
+
+    .btn-view-results:hover {
+      background-color: #31b0d5; /* Darker Bootstrap info color */
+    }
+
+    .btn-view-results:disabled {
+      background-color: #d3d3d3;
+      color: #a9a9a9;
+      cursor: not-allowed;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('questions.json')
+        .then(response => response.json())
+        .then(data => {
+          populateButtons(data.topics);
+          updateViewResultsButton(data.topics);
+        })
+        .catch(error => console.error('Error loading the JSON file:', error));
+    });
+
+    // function populateButtons(topics) {
+    //   const buttonContainer = document.getElementById('buttonContainer');
+    //   buttonContainer.innerHTML = ''; // Clear previous buttons
+
+    //   topics.forEach(topic => {
+    //     const button = document.createElement('button');
+    //     button.className = 'btn btn-primary btn-large';
+    //     button.innerText = topic.heading;
+    //     button.onclick = () => {
+    //       window.location.href = `questions.html?topic=${encodeURIComponent(topic.heading)}`;
+    //     };
+
+    //     // Check if the topic has been completed and disable the button if necessary
+    //     if (localStorage.getItem(topic.heading + '_completed')) {
+    //       button.classList.add('disabled-btn');
+    //       button.disabled = true;
+    //     }
+
+    //     buttonContainer.appendChild(button);
+    //   });
+    // }
+
+    // function updateViewResultsButton(topics) {
+    //   const viewResultsButton = document.getElementById('viewResultsButton');
+    //   const allCompleted = topics.every(topic => localStorage.getItem(topic.heading + '_completed'));
+
+    //   if (allCompleted) {
+    //     viewResultsButton.disabled = false;
+    //   } else {
+    //     viewResultsButton.disabled = true;
+    //   }
+    // }
+    function populateButtons(topics) {
+  const buttonContainer = document.getElementById('buttonContainer');
+  buttonContainer.innerHTML = ''; // Clear previous buttons
+
+  topics.forEach((topic, index) => {
+    const button = document.createElement('button');
+    button.className = 'btn btn-primary btn-large';
+    button.innerText = topic.heading;
+    button.onclick = () => {
+      window.location.href = `questions.html?topic=${encodeURIComponent(topic.heading)}`;
+    };
+
+    // Check if the topic has been completed
+    const isCompleted = localStorage.getItem(topic.heading + '_completed');
+    const isPreviousCompleted = index === 0 || localStorage.getItem(topics[index - 1].heading + '_completed');
+
+    if (isCompleted || !isPreviousCompleted) {
+      button.classList.add('disabled-btn');
+      button.disabled = true;
+    }
+
+    buttonContainer.appendChild(button);
+  });
+
+  // Update the "View Results" button based on topic completion
+  updateViewResultsButton(topics);
+}
+
+function updateViewResultsButton(topics) {
+  const viewResultsButton = document.getElementById('viewResultsButton');
+  const allCompleted = topics.every(topic => localStorage.getItem(topic.heading + '_completed'));
+
+  viewResultsButton.disabled = !allCompleted;
+}
+
+  </script>
+</head>
+<body>
+  <header class="header">
+    <img src="./assests/logo/Logo.png" alt="Logo" class="logo">
+    <img src="./assests/logo/header.png" alt="Header" class="header-image">
+  </header>
+  <main class="container">
+    <h1 class="text-center">Select a Topic</h1>
+    <div id="buttonContainer" class="text-center"></div>
+    <div class="text-center">
+      <!-- <button id="viewResultsButton" class="btn btn-view-results" disabled>
+        <a href="graph.html" style="color: white; text-decoration: none;">View Results</a>
+      </button> -->
+      <button id="viewResultsButton" class="btn btn-view-results" disabled onclick="handleViewResultsClick(event)">
+        <a href="graph.html" style="color: white; text-decoration: none;">View Results</a>
+      </button>
+      
+      
+    </div>
+
+    <script>
+      // document.addEventListener('DOMContentLoaded', function() {
+      //   const storedTimestamp = localStorage.getItem('viewResultsTimestamp');
+      //   if (storedTimestamp) {
+      //     const currentTime = new Date().getTime();
+      //     const timestamp = new Date(storedTimestamp).getTime();
+      //     const oneDayInMillis = 24 * 60 * 60 * 1000; // 1 day in milliseconds
+    
+      //     if (currentTime - timestamp >= oneDayInMillis) {
+      //       clearLocalStorage();
+      //       // Remove the timestamp after clearing local storage
+      //       localStorage.removeItem('viewResultsTimestamp');
+      //     }
+      //   }
+      // });
+    
+      function clearLocalStorage() {
+        console.log('Clearing local storage...');
+    
+        // Fetch the topics from the JSON file
+        fetch('questions.json')
+          .then(response => response.json())
+          .then(data => {
+            const topics = data.topics;
+    
+            topics.forEach(topic => {
+              localStorage.removeItem(topic.heading + '_completed');
+              localStorage.removeItem(topic.heading + '_score');
+              localStorage.removeItem(topic.heading + '_totalQuestions');
+            });
+    
+            localStorage.removeItem('topics');
+    
+            console.log('Local storage cleared.');
+          })
+          .catch(error => console.error('Error clearing local storage:', error));
+      }
+    
+    </script>
+    
+    
+    
+  </main>
+</body>
+</html>

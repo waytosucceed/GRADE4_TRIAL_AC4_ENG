@@ -1,0 +1,260 @@
+{
+  "heading": "Language and Grammar",
+  "topics": [
+    {
+      "heading": "Normal",
+      "questions": [
+        {
+          "questionNo": 1,
+          "question": "What word means the same as \"big\"?",
+          "options": ["Small", "Large", "Tiny"],
+          "answer": 1,
+          "image": "",
+          "explanation": "\"Large\" means the same as \"big\" - they both describe something that is not small."
+        },
+        {
+          "questionNo": 2,
+          "question": "Who grows food on a farm?",
+          "options": ["Chef", "Police", "Farmer"],
+          "answer": 2,
+          "image": "",
+          "explanation": "A farmer is a person who works on a farm and grows crops or raises animals for food."
+        },
+        {
+          "questionNo": 3,
+          "question": "Which word is a common noun?",
+          "options": ["Sarah", "girl", "London"],
+          "answer": 1,
+          "image": "",
+          "explanation": "\"Girl\" is a common noun because it refers to any girl, not a specific one."
+        },
+        {
+          "questionNo": 4,
+          "question": "Which of these is a proper noun?",
+          "options": ["school", "teacher", "Monday"],
+          "answer": 2,
+          "image": "",
+          "explanation": "Monday is a proper noun because it's the name of a specific day of the week."
+        },
+        {
+          "questionNo": 5,
+          "question": "What is a group of players called?",
+          "options": ["Team", "Herd", "Colony"],
+          "answer": 0,
+          "image": "",
+          "explanation": "A team is a group of people who play a sport or work together."
+        },
+        {
+          "questionNo": 6,
+          "question": "What is a female horse called?",
+          "options": ["Mare", "Stallion", "Foal"],
+          "answer": 0,
+          "image": "",
+          "explanation": "A female horse is called a mare, while a male horse is called a stallion."
+        },
+        {
+          "questionNo": 7,
+          "question": "Hear the word and complete the spelling: /Mistake/ _I_ _AK_",
+          "options": ["MICTAKE", "MISTAKE", "MISTAKK"],
+          "answer": 1,
+          "image": "",
+          "explanation": "The complete spelling is M-I-S-T-A-K-E. It means something that you think or do that is wrong."
+        },
+        {
+          "questionNo": 8,
+          "question": "Which word rhymes with \"tree\"?",
+          "options": ["Leaf", "Branch", "Bee"],
+          "answer": 2,
+          "image": "",
+          "explanation": "\"Tree\" and \"Bee\" rhyme because they end with the same sound: \"-ee\"."
+        },
+        {
+          "questionNo": 9,
+          "question": "What is the plural of \"child\"?",
+          "options": ["Childs", "Children", "Childes"],
+          "answer": 1,
+          "image": "",
+          "explanation": "\"Child\" is a special word that changes to \"children\" in plural form."
+        },
+        {
+          "questionNo": 10,
+          "question": "How do you spell the word that means \"a big body of water\"?",
+          "options": ["Se", "Sea", "See"],
+          "answer": 1,
+          "image": "",
+          "explanation": "\"Sea\" uses the \"ea\" diphthong to make the long \"e\" sound."
+        }
+      ]
+    },
+    {
+      "heading": "Level 1",
+      "questions": [
+        {
+          "questionNo": 11,
+          "question": "Which of the following is a collective noun?",
+          "options": ["crowd", "table", "joy", "mountain"],
+          "answer": 0,
+          "image": "",
+          "explanation": "\"Crowd\" is a collective noun as it refers to a group of people."
+        },
+        {
+          "questionNo": 12,
+          "question": "Which word means \"to judge incorrectly\"?",
+          "options": ["unjudge", "nonjudge", "misjudge", "ex-judge"],
+          "answer": 2,
+          "image": "",
+          "explanation": "The prefix \"mis-\" indicates doing something wrongly. \"Misjudge\" means to judge incorrectly or form a wrong opinion."
+        },
+        {
+          "questionNo": 13,
+          "question": "Which of the following is a personal pronoun?",
+          "options": ["who", "her", "whose", "that"],
+          "answer": 1,
+          "image": "",
+          "explanation": "\"Her\" is a personal pronoun used to refer to a female person or thing."
+        },
+        {
+          "questionNo": 14,
+          "question": "Which of the following is a possessive pronoun?",
+          "options": ["my","which"],
+          "answer": 0,
+          "image": "",
+          "explanation": "\"My\" is a possessive pronoun indicating ownership or possession by the speaker."
+        },
+        {
+          "questionNo": 15,
+          "question": "Which of the following is a demonstrative pronoun?",
+          "options": ["which", "this", "who", "whose"],
+          "answer": 1,
+          "image": "",
+          "explanation": "\"This\" is a demonstrative pronoun used to indicate something nearby or present."
+        },
+        {
+          "questionNo": 16,
+          "question": "The interrogative sentence ends with a ___.",
+          "options": ["!", "?", ".", ","],
+          "answer": 1,
+          "image": "",
+          "explanation": "Interrogative sentences ask a question and end with a question mark (?)."
+        },
+        {
+          "questionNo": 17,
+          "question": "Which word is an adverb in the following sentence? <br> \"She sang beautifully on stage.\"",
+          "options": ["she", "sang", "beautifully", "stage"],
+          "answer": 2,
+          "image": "",
+          "explanation": "\"Beautifully\" is an adverb that describes how she sang (the verb)."
+        },
+        {
+          "questionNo": 18,
+          "question": "What type of sentence is this:<br> \"Please clean your room.\"",
+          "options": ["Imperative", "Exclamatory", "Interrogative"],
+          "answer": 0,
+          "image": "",
+          "explanation": "Imperative sentences give a command or make a request."
+        },
+        {
+          "questionNo": 19,
+          "question": "Which word is an adjective in the following sentence? <br> \"The tall tree swayed in the wind.\"",
+          "options": ["tall", "tree", "swayed", "wind"],
+          "answer": 0,
+          "image": "",
+          "explanation": "\"Tall\" is an adjective that describes the noun \"tree.\""
+        },
+        {
+          "questionNo": 20,
+          "question": "Which word follows the \"consonant with i-e\" pattern? ",
+          "options": ["listed", "side"],
+          "answer": 1,
+          "image": "",
+          "explanation": "\"Side\" follows this pattern, with the \"i-e\" making the long \"i\" sound after the consonant \"s\"."
+        }
+      ]
+    },
+    {
+      "heading": "Level 2",
+      "questions": [
+        {
+          "questionNo": 21,
+          "question": "Which of the following is an adjective of quality?",
+          "options": ["many", "few", "beautiful", "several"],
+          "answer": 2,
+          "image": "",
+          "explanation": "\"Beautiful\" is an adjective of quality as it describes the quality or characteristic of something."
+        },
+        {
+          "questionNo": 22,
+          "question": "What does the prefix \"pre-\" mean in the word \"preview\"?",
+          "options": ["After", "Before", "During", "none of the above"],
+          "answer": 1,
+          "image": "",
+          "explanation": "The prefix \"pre-\" means \"before.\" A \"preview\" is something you see before the main event."
+        },
+        {
+          "questionNo": 23,
+          "question": "Can you pass me ___ juice?",
+          "options": ["a", "an", "the"],
+          "answer": 2,
+          "image": "",
+          "explanation": "Use \"the\" because it’s a specific juice. Both the speaker and listener know about the juice."
+        },
+        {
+          "questionNo": 24,
+          "question": "In \"The waves gently lapped against the shore,\" the complete predicate is:",
+          "options": ["lapped against the shore", "gently", "waves", "gently lapped against the shore"],
+          "answer": 3,
+          "image": "",
+          "explanation": "The complete predicate shows the verb and additional details."
+        },
+        {
+          "questionNo": 25,
+          "question": "Which of the following is the positive or absolute form of the adjective?",
+          "options": ["better", "best", "good", "well"],
+          "answer": 2,
+          "image": "",
+          "explanation": "\"Good\" is the positive or absolute form of the adjective. \"Better\" is the comparative form, \"Best\" is the superlative form, and \"Well\" is an adverb, not an adjective."
+        },
+        {
+          "questionNo": 26,
+          "question": "A/An _____ subject contains two or more nouns.",
+          "options": ["double", "plural", "single", "compound"],
+          "answer": 3,
+          "image": "",
+          "explanation": "A compound subject is made up of two or more joined noun subjects."
+        },
+        {
+          "questionNo": 27,
+          "question": "Choose the synonym for \"exhausted\":",
+          "options": ["energetic", "tired", "excited", "lively"],
+          "answer": 1,
+          "image": "",
+          "explanation": "\"Tired\" means feeling fatigued or lacking energy, which is similar to being \"exhausted.\""
+        },
+        {
+          "questionNo": 28,
+          "question": "Which of the following is an adverb of time?",
+          "options": ["silently", "now", "here", "nearby"],
+          "answer": 1,
+          "image": "",
+          "explanation": "Adverbs of time tell us when something happens. \"Now\" indicates the time something is happening."
+        },
+        {
+          "questionNo": 29,
+          "question": "Her painting is ______ than mine. (Use the comparative form of adjective)",
+          "options": ["beautiful", "more beautiful", "most beautiful", "beautifuller"],
+          "answer": 1,
+          "image": "",
+          "explanation": "\"More beautiful\" is the comparative form of the adjective \"beautiful\" used to compare two entities."
+        },
+        {
+          "questionNo": 30,
+          "question": "Choose the antonym for \"honest\":",
+          "options": ["truthful", "sincere", "deceptive", "trustworthy"],
+          "answer": 2,
+          "image": "",
+          "explanation": "\"Deceptive\" means intended to mislead or trick, which is the opposite of being \"honest.\""
+        }
+      ]
+    }
+  ]
+}
